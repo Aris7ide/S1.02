@@ -15,7 +15,7 @@ public class Main {
         double totalSales = 0.0;
 
         Sale venta1 = new Sale();
-        //venta1.getProducts().add(new Product("Cafè", 3.50));
+        //Empty sale
 
         try {
             venta1.calculatePrice();
@@ -35,6 +35,17 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
+        Sale venta3 = new Sale();
+        venta3.getProducts().add(new Product("zumo natural", 6.00));
+        venta3.getProducts().add(new Product("Coca-cola", 3.50));
+
+        try {
+            venta3.calculatePrice();
+            allSales.add(venta3);
+        } catch (EmptySaleException e) {
+            System.out.println(e.getMessage());
+        }
+
         for (Sale s: allSales) {
             totalSales += s.getPrice();
         }
@@ -42,6 +53,7 @@ public class Main {
         System.out.println("Las ventas han sido " + allSales.size());
         System.out.println("El total es " + totalSales + " Euros");
 
+        // Trying the Out Of Bounds Exception.
         try {
             allSales.get(5);
         } catch (IndexOutOfBoundsException e) {

@@ -42,3 +42,4 @@ Por último, cambia la clase EmptySaleException para que extienda de una excepci
 - De ahi he tenido que crear otro Arraylist en el Main con todas las ventas asi para poder calcular el total de todas las ventas.
 - Con un for he añadido todos los precios de las ventas para sacar un total.
 - Le he añadido un try/catch con IndexOutOfBoundsException llamando a un elemento get(5) de las ventas que no existe.
+- Cambiado Exception a RuntimeException, he limpiado el throws en la clase Sale y dejado el try/catch para que el error salga igual y la applicacion no termine.
