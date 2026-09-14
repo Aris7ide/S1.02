@@ -19,10 +19,12 @@ public class ConsoleReader {
         while (true) {
             try {
                 System.out.println(message);
-                byte value = Byte.parseByte(scanner.nextLine());
+                byte value = scanner.nextByte();
+                scanner.nextLine();
                 return value;
-            } catch (NumberFormatException e) {
-                System.out.println("Error: " + e.getMessage());
+            } catch (InputMismatchException e) {
+                System.out.println("Error: el numero no es un byte");
+                scanner.nextLine();
             }
         }
 
