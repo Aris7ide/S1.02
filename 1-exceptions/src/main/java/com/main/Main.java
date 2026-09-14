@@ -42,6 +42,13 @@ public class Main {
         System.out.println("Las ventas han sido " + allSales.size());
         System.out.println("El total es " + totalSales + " Euros");
 
+        try {
+            allSales.get(5);
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+
+
 
     }
 

@@ -39,4 +39,5 @@ Por último, cambia la clase EmptySaleException para que extienda de una excepci
 - He creado la clase excepcion EmptySaleException usando el Extends Exception.
 - En el metodo calculatePrice le he metido el throws EmptySaleException con el mensaje de error
 - He creado el main usando el try/catch para comprobar la excepcion, sin ventas sale el error.
-- 
+- De ahi he tenido que crear otro Arraylist en el Main con todas las ventas asi para poder calcular el total de todas las ventas.
+- Con un for he añadido todos los precios de las ventas para sacar un total.
