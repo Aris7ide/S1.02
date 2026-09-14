@@ -42,7 +42,33 @@ public class ConsoleReader {
 
     }
 
-    public static
+    public static float readFloat (String message) {
+
+        while (true) {
+            try {
+                System.out.println(message);
+                float value = Float.parseFloat(scanner.nextLine());
+                return value;
+            } catch (NumberFormatException e) {
+                System.out.println("Error: el dato no es un float");
+            }
+        }
+
+    }
+
+    public static double readDouble (String message) {
+
+        while (true) {
+            try {
+                System.out.println(message);
+                double value = Double.parseDouble(scanner.nextLine());
+                return value;
+            } catch (NumberFormatException e) {
+                System.out.println("Error: el dato no es un double");
+            }
+        }
+
+    }
 
 
 
