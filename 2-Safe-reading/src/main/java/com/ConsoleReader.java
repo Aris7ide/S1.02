@@ -28,6 +28,22 @@ public class ConsoleReader {
 
     }
 
+    public static int readInt (String message) {
+
+        while (true) {
+            try {
+                System.out.println(message);
+                int value = Integer.parseInt(scanner.nextLine());
+                return value;
+            } catch (NumberFormatException e) {
+                System.out.println("Error: el dato no es un int");
+            }
+        }
+
+    }
+
+    public static
+
 
 
 
