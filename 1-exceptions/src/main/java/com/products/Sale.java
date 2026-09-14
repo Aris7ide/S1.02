@@ -8,10 +8,11 @@ import java.util.List;
 public class Sale {
 
     private List<Product> products;
-    private double price;
+    private double totalPrice;
 
-    public Sale(List<Product> products) {
+    public Sale() {
         this.products = new ArrayList<>();
+        this.totalPrice = 0.0;
     }
 
     public double calculatePrice() throws EmptySaleException {
@@ -26,7 +27,9 @@ public class Sale {
             sum += p.getPrice();
         }
 
-        return sum;
+        totalPrice = sum;
+
+        return totalPrice;
 
     }
 
@@ -39,10 +42,10 @@ public class Sale {
     }
 
     public double getPrice() {
-        return price;
+        return totalPrice;
     }
 
     public void setPrice(double price) {
-        this.price = price;
+        this.totalPrice = price;
     }
 }

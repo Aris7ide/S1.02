@@ -32,3 +32,11 @@ Por último, cambia la clase EmptySaleException para que extienda de una excepci
 - **Llenguatge**: Java 25
 - **Gestor de projecte**: Maven
 - **IDE**: IntelliJ IDEA
+
+## Excecution
+
+- He creado la clase Product y la clase Sale con el ArrayList de Sales. 
+- He creado la clase excepcion EmptySaleException usando el Extends Exception.
+- En el metodo calculatePrice le he metido el throws EmptySaleException con el mensaje de error
+- He creado el main usando el try/catch para comprobar la excepcion, sin ventas sale el error.
+- 
