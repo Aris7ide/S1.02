@@ -43,3 +43,7 @@ Por último, cambia la clase EmptySaleException para que extienda de una excepci
 - Con un for he añadido todos los precios de las ventas para sacar un total.
 - Le he añadido un try/catch con IndexOutOfBoundsException llamando a un elemento get(5) de las ventas que no existe.
 - Cambiado Exception a RuntimeException, he limpiado el throws en la clase Sale y dejado el try/catch para que el error salga igual y la applicacion no termine.
+
+## Diferencia entre checked y unchecked exceptions
+Las checked son las que heredan de Exception, y requieren en fase de programacion algunas estructuras, tipo try/catch y throws. Los unchecked no requieren eso. 
+si no se ponen try and catch el programa termina, si se ponen igualmente en un try/catch el programa da el error y sigue.
