@@ -35,10 +35,12 @@ public class ConsoleReader {
         while (true) {
             try {
                 System.out.println(message);
-                int value = Integer.parseInt(scanner.nextLine());
+                int value = scanner.nextInt();
+                scanner.nextLine();
                 return value;
             } catch (NumberFormatException e) {
                 System.out.println("Error: el dato no es un int");
+                scanner.nextLine();
             }
         }
 
@@ -49,10 +51,12 @@ public class ConsoleReader {
         while (true) {
             try {
                 System.out.println(message);
-                float value = Float.parseFloat(scanner.nextLine());
+                float value = scanner.nextFloat();
+                scanner.nextLine();
                 return value;
             } catch (NumberFormatException e) {
                 System.out.println("Error: el dato no es un float");
+                scanner.nextLine();
             }
         }
 
@@ -63,10 +67,12 @@ public class ConsoleReader {
         while (true) {
             try {
                 System.out.println(message);
-                double value = Double.parseDouble(scanner.nextLine());
+                double value = scanner.nextDouble();
+                scanner.nextLine();
                 return value;
             } catch (NumberFormatException e) {
                 System.out.println("Error: el dato no es un double");
+                scanner.nextLine();
             }
         }
 

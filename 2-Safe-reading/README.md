@@ -25,4 +25,6 @@ Para ello, crea un único objeto Scannery define una serie de métodos estático
 - He creado una clase ConsoleReader donde he importade el Scanner
 - He crado una clase Main de donde llamarè los metodos del ConsoleReader sin necesidad de importar Scanner
 - En la clase Console Reader he usado un bucle for (while) con un try and catch para pedir al usuario un byte en forma de string, pasarlo a byte y averiguar que se trata de un byte.
+- Me he dado cuenta que el exception que tenia que usar era InputMismatchException, y no NumberFormatException como sugerido por el AI, 
+- Esto crea un problema de buffer, no hace falta hacer ningun parsing pero si hace falta limpiar el buffer cada vez. Cambiada la excepcion en todos los metodos hasta ahora.
 - 

@@ -12,6 +12,8 @@ public class Main {
         float f = ConsoleReader.readFloat("Introduce un dato de tipo float");
         double d = ConsoleReader.readDouble("Introduce un dato de tipo double");
 
+        System.out.println("Y AHORA CON EXCEPCIONES PERSONALIZADAS");
+
     }
 }
 
