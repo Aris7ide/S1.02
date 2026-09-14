@@ -15,7 +15,7 @@ public class Sale {
         this.totalPrice = 0.0;
     }
 
-    public double calculatePrice() throws EmptySaleException {
+    public double calculatePrice(){
 
         if (this.products.isEmpty()) {
             throw new EmptySaleException("Para hacer una venta el carrito no puede estar vacio");

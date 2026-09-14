@@ -15,7 +15,7 @@ public class Main {
         double totalSales = 0.0;
 
         Sale venta1 = new Sale();
-        venta1.getProducts().add(new Product("Cafè", 3.50));
+        //venta1.getProducts().add(new Product("Cafè", 3.50));
 
         try {
             venta1.calculatePrice();
