@@ -28,3 +28,4 @@ Para ello, crea un único objeto Scannery define una serie de métodos estático
 - He puesto un try-catch en el metodo, aunque me salia el mensaje de la excepcion me saltava error y se parava la applicacion. 
 - Asi he puesto un while (true) al principio del metodo para crear un bucle infinito hasta que el valor sea exacto. 
 - El metodo entraba en bucle y he puesto un scanner.nextLine() en el catch para limpiar el buffer.
+- He usado la misma estructura para los metodos readInt(), readFloat() y readDouble().

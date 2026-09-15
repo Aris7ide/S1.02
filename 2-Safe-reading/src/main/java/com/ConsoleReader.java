@@ -30,4 +30,28 @@ public class ConsoleReader {
             }
         }
     }
+
+    public static float readFloat(String message) {
+        while (true) {
+            System.out.println(message);
+            try {
+                return scanner.nextFloat();
+            } catch (InputMismatchException e) {
+                System.out.println("El valor no es valido");
+                scanner.nextLine();
+            }
+        }
+    }
+
+    public static double readDouble(String message) {
+        while (true) {
+            System.out.println(message);
+            try {
+                return scanner.nextDouble();
+            } catch (InputMismatchException e) {
+                System.out.println("El valor no es valido");
+                scanner.nextLine();
+            }
+        }
+    }
 }
