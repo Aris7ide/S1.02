@@ -1,5 +1,7 @@
 package com;
 
+import com.exceptions.InvalidCharLength;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -47,11 +49,32 @@ public class ConsoleReader {
         while (true) {
             System.out.println(message);
             try {
-                return scanner.nextDouble();
+                double input = scanner.nextDouble();
+                scanner.nextLine();
+                return input;
             } catch (InputMismatchException e) {
                 System.out.println("El valor no es valido");
                 scanner.nextLine();
             }
+        }
+    }
+
+    public static char readChar(String message) {
+        while (true) {
+            System.out.println(message);
+            try {
+                String input = scanner.nextLine();
+
+                if (input.length() != 1) {
+                    throw new InvalidCharLength("Tiene que ser una sola letra.");
+                }
+
+                return input.charAt(0);
+
+            } catch (InvalidCharLength e) {
+                System.out.println("Error: " + e.getMessage());
+            }
+
         }
     }
 }

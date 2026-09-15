@@ -13,6 +13,8 @@ public class Main {
         float valueFloat = ConsoleReader.readFloat("Escribe un valor considerado Float");
         double valueDouble = ConsoleReader.readDouble("Escribe un valor considerado Double");
 
+        char valueChar = ConsoleReader.readChar("Escribe una sola letra");
+
     }
 }
 

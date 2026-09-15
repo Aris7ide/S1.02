@@ -29,3 +29,4 @@ Para ello, crea un único objeto Scannery define una serie de métodos estático
 - Asi he puesto un while (true) al principio del metodo para crear un bucle infinito hasta que el valor sea exacto. 
 - El metodo entraba en bucle y he puesto un scanner.nextLine() en el catch para limpiar el buffer.
 - He usado la misma estructura para los metodos readInt(), readFloat() y readDouble().
+- Para el metodo readChar() he creado una Excepcion InvalidCharLength y la he puesto en el metodo con un if (controlando que la palabra solo tenga una letra) y igualmente en un try-catch.
