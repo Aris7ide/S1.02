@@ -30,3 +30,5 @@ Para ello, crea un único objeto Scannery define una serie de métodos estático
 - El metodo entraba en bucle y he puesto un scanner.nextLine() en el catch para limpiar el buffer.
 - He usado la misma estructura para los metodos readInt(), readFloat() y readDouble().
 - Para el metodo readChar() he creado una Excepcion InvalidCharLength y la he puesto en el metodo con un if (controlando que la palabra solo tenga una letra) y igualmente en un try-catch.
+- He hecho basicamente casi lo mismo para readStrin(), usando tambièn el .strip() para quitar espacios y ser mas preciso.
+- 

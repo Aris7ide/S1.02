@@ -15,6 +15,8 @@ public class Main {
 
         char valueChar = ConsoleReader.readChar("Escribe una sola letra");
 
+        String valueString = ConsoleReader.readString("Escribe una frase de no mas de 20 palabras");
+
     }
 }
 

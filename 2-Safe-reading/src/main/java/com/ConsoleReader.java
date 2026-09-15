@@ -1,6 +1,7 @@
 package com;
 
 import com.exceptions.InvalidCharLength;
+import com.exceptions.InvalidStringLength;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -75,6 +76,24 @@ public class ConsoleReader {
                 System.out.println("Error: " + e.getMessage());
             }
 
+        }
+    }
+
+    public static String readString(String message) {
+        while (true) {
+            System.out.println(message);
+            try {
+                String input = scanner.nextLine().strip();
+
+                if (input.length()>20) {
+                    throw new InvalidStringLength("Maximo 20 letras");
+                }
+
+                return input;
+
+            } catch (InvalidStringLength e) {
+                System.out.println(e.getMessage());
+            }
         }
     }
 }
