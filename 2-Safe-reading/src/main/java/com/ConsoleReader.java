@@ -1,5 +1,7 @@
 package com;
 
+import com.exceptions.InvalidLengthChar;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -9,10 +11,10 @@ public class ConsoleReader {
 
     private ConsoleReader() {}
 
-    public static String readString(String prompt) {
+    /*public static String readString(String prompt) {
         System.out.println(prompt);
         return scanner.nextLine();
-    }
+    }*/
 
     public static byte readByte (String message) {
 
@@ -74,6 +76,32 @@ public class ConsoleReader {
                 System.out.println("Error: el dato no es un double");
                 scanner.nextLine();
             }
+        }
+
+    }
+
+    public static String setLength (int length) {
+
+        if (length != 0) {
+            throw new InvalidLengthChar("Tiene que ser una sola letra.");
+        }
+
+    }
+
+    public static char readChar (String message) {
+
+        while (true) {
+
+            try {
+                System.out.println(message);
+                String word = ConsoleReader.setLength(scanner.next().charAt(0));
+                char value;
+                scanner.nextLine();
+                return value;
+            } catch (InvalidLengthChar e) {
+                System.out.println(e.getMessage());
+            }
+
         }
 
     }
