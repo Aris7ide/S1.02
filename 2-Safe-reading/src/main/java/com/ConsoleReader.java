@@ -1,5 +1,6 @@
 package com;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ConsoleReader {
@@ -7,8 +8,14 @@ public class ConsoleReader {
     private static Scanner scanner = new Scanner(System.in);
 
     public static byte readByte(String message) {
-        System.out.println(message);
-        return scanner.nextByte();
+        while (true) {
+            System.out.println(message);
+            try {
+                return scanner.nextByte();
+            } catch (InputMismatchException e) {
+                System.out.println("El valor no es valido");
+                scanner.nextLine();
+            }
+        }
     }
-
 }

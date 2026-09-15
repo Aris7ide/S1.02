@@ -8,7 +8,7 @@ public class Main {
 
     static void main(String[] args) {
 
-        byte value = ConsoleReader.readByte("Escribe un valor considerato byte:");
+        byte value = ConsoleReader.readByte("Escribe un valor considerado byte:");
 
     }
 }
