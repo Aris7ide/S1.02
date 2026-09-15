@@ -1,5 +1,6 @@
 package com;
 
+import com.exceptions.InvalidBoolean;
 import com.exceptions.InvalidCharLength;
 import com.exceptions.InvalidStringLength;
 
@@ -92,6 +93,23 @@ public class ConsoleReader {
                 return input;
 
             } catch (InvalidStringLength e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+
+    public static String readBoolean(String message) {
+        while (true) {
+            System.out.println(message);
+            try {
+                String input = scanner.nextLine();
+
+                if (!input.equals("s") && !input.equals("n")) {
+                    throw new InvalidBoolean("Tiene que ser \"s\" o \"n\"");
+                }
+
+                return input;
+            } catch (InvalidBoolean e) {
                 System.out.println(e.getMessage());
             }
         }

@@ -17,6 +17,8 @@ public class Main {
 
         String valueString = ConsoleReader.readString("Escribe una frase de no mas de 20 palabras");
 
+        String valueBoolean = ConsoleReader.readBoolean("s/n?");
+
     }
 }
 
