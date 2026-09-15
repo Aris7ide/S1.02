@@ -18,4 +18,16 @@ public class ConsoleReader {
             }
         }
     }
+
+    public static int readInt(String message) {
+        while (true) {
+            System.out.println(message);
+            try {
+                return scanner.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("El valor no es valido");
+                scanner.nextLine();
+            }
+        }
+    }
 }
