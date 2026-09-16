@@ -33,4 +33,6 @@ Para ello, crea un único objeto Scannery define una serie de métodos estático
 - ui.start() lanza el menu que he empezado a escribir en la clase ConsoleUI en el metodo start().
 - en ui.start() un menu de toda la vida usando ConsoleReader para cualquier entrada de datos (readInt());
 - en el switch he empezado a escribir los metodos que van en ReservationService que se encarga de la logica (ReservationService.showsAllSeats).
-- 
+- he creado el metodo checkName() en ReservationService que controla que el nombre existe y devuelve un true/false.
+- he creado el segundo metodo del menu en ReservationService, showsAllSeatsByName() que solo devuelve los elementos bajo el mismo nombre. 
+- Este ultimo usa el checkName() para asegurarse que el nombre existe.

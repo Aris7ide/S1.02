@@ -30,6 +30,7 @@ public class ConsoleUI {
                     ReservationService.showsAllSeats();
                     break;
                 case 2:
+                    ReservationService.showsAllSeatsByName();
                     break;
                 case 3:
                     break;

@@ -10,7 +10,7 @@ public class Main {
         System.out.println("CONFIGURE YOUR CINEMA");
 
         int rowsTotal = ConsoleReader.readInt("How many rows does the room have?");
-        int seatsTotal = ConsoleReader.readInt("Hoe many seats does any row have?");
+        int seatsTotal = ConsoleReader.readInt("How many seats does any row have?");
 
         ReservationService service = new ReservationService(rowsTotal, seatsTotal);
         ConsoleUI ui = new ConsoleUI(service); //hay que crear la clase ui con un constructor que reciba service
