@@ -1,7 +1,7 @@
 package com.exceptions;
 
 public class InvalidSeatException extends RuntimeException {
-  public InvalidSeatException(String message) {
-    super(message);
-  }
+    public InvalidSeatException(String message) {
+        super(message);
+    }
 }

@@ -1,7 +1,7 @@
 package com.exceptions;
 
 public class InvalidPersonNameException extends RuntimeException {
-  public InvalidPersonNameException(String message) {
-    super(message);
-  }
+    public InvalidPersonNameException(String message) {
+        super(message);
+    }
 }

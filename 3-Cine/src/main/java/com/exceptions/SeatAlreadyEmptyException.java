@@ -1,7 +1,7 @@
 package com.exceptions;
 
 public class SeatAlreadyEmptyException extends RuntimeException {
-  public SeatAlreadyEmptyException(String message) {
-    super(message);
-  }
+    public SeatAlreadyEmptyException(String message) {
+        super(message);
+    }
 }
