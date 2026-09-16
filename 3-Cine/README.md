@@ -36,3 +36,15 @@ Para ello, crea un único objeto Scannery define una serie de métodos estático
 - he creado el metodo checkName() en ReservationService que controla que el nombre existe y devuelve un true/false.
 - he creado el segundo metodo del menu en ReservationService, showsAllSeatsByName() que solo devuelve los elementos bajo el mismo nombre. 
 - Este ultimo usa el checkName() para asegurarse que el nombre existe.
+- #### He creado el metodo reserveSeat()
+- He llamado el metodo ReservatioService.readString() y añadido la excepcion personalizada para estar seguro que el nombre no estè vacio o con numeros.
+- He añadido al reserveSeat() el Reservation.readInt() creando dos try-catch, uno para la fila y uno para el asiento.
+- El de la fila entra en un try-catch con una unica excepcion InvalidSeatException, para evitar que se ponga una fila que no existe. 
+- El del asiento entra en un try-catch con dos excepciones (InvalidSeat y SeatAlreadyTaken).
+- #### Importante notar que he tenido que meter un break; en los while(true) para salir de uno y poder entrar en otro.
+- He completado el reserveSeat() creando un Seat y guardándolo en el Array listSeats.
+- He intentado enseñar las reservas hechas con showsAllSeats() y showsAllSeatsByName() y todo sale correcto.
+- #### He creado el cancelSeat() 
+- Ya que tenia que pedir otra vez seat y row he creado dos metodos getSeat y getRow paara facilitar
+- en el metodo cancelSeat() he llamado los getSeat y getRow
+- despues de verificar que el Seat existe he cancelado al reserva con un .remove

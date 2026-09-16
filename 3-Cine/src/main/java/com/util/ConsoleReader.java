@@ -28,7 +28,14 @@ public class ConsoleReader {
         while (true) {
             System.out.println(message);
             try {
-                return scanner.nextLine();
+                String name = scanner.nextLine().trim();
+                if (name.isEmpty()) {
+                    throw new InvalidPersonNameException("El valor no es valido");
+                }
+                if (name.matches(".*\\d.*")) {
+                    throw new InvalidPersonNameException("El nombre no puede tener numeros");
+                }
+                return name;
             } catch (InvalidPersonNameException e) {
                 System.out.println(e.getMessage());
             }

@@ -15,7 +15,7 @@ public class Main {
         ReservationService service = new ReservationService(rowsTotal, seatsTotal);
         ConsoleUI ui = new ConsoleUI(service); //hay que crear la clase ui con un constructor que reciba service
 
-        ui.start(); //metodo en ui no statico
+        ui.start();
 
     }
 }
