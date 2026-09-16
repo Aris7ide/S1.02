@@ -48,3 +48,5 @@ Para ello, crea un único objeto Scannery define una serie de métodos estático
 - Ya que tenia que pedir otra vez seat y row he creado dos metodos getSeat y getRow paara facilitar
 - en el metodo cancelSeat() he llamado los getSeat y getRow
 - despues de verificar que el Seat existe he cancelado al reserva con un .remove
+- #### He creado el metodo cancelSeatByName() en ReservationService.
+- Tiene la misma estructura del showsAllSeatsByName() per la diferencia es que una vez encontrados se cancelan con un .removeIf().

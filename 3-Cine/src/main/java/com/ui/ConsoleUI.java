@@ -39,6 +39,7 @@ public class ConsoleUI {
                     ReservationService.cancelSeat(service);
                     break;
                 case 5:
+                    ReservationService.cancelSeatByName(service);
                     break;
                 case 0:
                     System.out.println("Hasta pronto.");

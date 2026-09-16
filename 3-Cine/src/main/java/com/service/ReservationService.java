@@ -119,6 +119,25 @@ public class ReservationService {
 
     }
 
+    public static void cancelSeatByName(ReservationService service) {
+
+        if (listSeats.isEmpty()) {
+            System.out.println("No hay ningun asiento reservado");
+        } else {
+            while (true) {
+                String name = ConsoleReader.readString("Cual es el nombre de la persona?");
+                if (!ReservationService.checkName(name)) {
+                    System.out.println("La persona no existe.\n" +
+                            "Escribe un nombre valido.");
+                } else {
+                    listSeats.removeIf(seat -> seat.getPersonName().equalsIgnoreCase(name));
+                    System.out.println("Todas las reservas con ese nombre han sido canceladas");
+                    break;
+                }
+            }
+        }
+    }
+
     public static int getRow(ReservationService service) {
         int row;
         while (true) {
