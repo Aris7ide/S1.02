@@ -35,13 +35,12 @@ Por último, cambia la clase EmptySaleException para que extienda de una excepci
 
 ## Excecution
 
-- He creado la clase Product y la clase Sale con el ArrayList de Sales. 
+- He creado la clase Product con name y price y la clase Sale con el ArrayList de Sales. 
 - He creado la clase excepcion EmptySaleException usando el Extends Exception.
 - En el metodo calculatePrice le he metido el throws EmptySaleException con el mensaje de error
 - He creado el main usando el try/catch para comprobar la excepcion, sin ventas sale el error.
-- De ahi he tenido que crear otro Arraylist en el Main con todas las ventas asi para poder calcular el total de todas las ventas.
-- Con un for he añadido todos los precios de las ventas para sacar un total.
-- Le he añadido un try/catch con IndexOutOfBoundsException llamando a un elemento get(5) de las ventas que no existe.
+- #### Es muy importante aqui notar que cuando la excepcion extends de Exception hay que meter el throws en el metodo para llamar el error y en el main siempre hhay que haber un try/catch.
+- He llamado una posicion de un Arraylist desde el main que no existe y usando el try/catch he controlado la Excepcion IndexOutOfBoundsException, sacando un mensaje de error sin interrumpir la excecucion.
 - Cambiado Exception a RuntimeException, he limpiado el throws en la clase Sale y dejado el try/catch para que el error salga igual y la applicacion no termine.
 
 ## Diferencia entre checked y unchecked exceptions

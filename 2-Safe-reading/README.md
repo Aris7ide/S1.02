@@ -1,4 +1,4 @@
-# Ejercicio 1 — Lectura segura desde el teclado
+# Nivell 2 Exercici 1 — Lectura segura des del teclat
 
 **Descripció**: Objetivos:
 

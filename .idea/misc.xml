@@ -5,6 +5,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/1-exceptions/pom.xml" />
+        <option value="$PROJECT_DIR$/2-Safe-reading/pom.xml" />
+        <option value="$PROJECT_DIR$/3-Cine/pom.xml" />
       </list>
     </option>
   </component>

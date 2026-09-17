@@ -11,26 +11,20 @@ public class Main {
 
     public static void main(String[] args) {
 
-        List<Sale> allSales = new ArrayList<>();
-        double totalSales = 0.0;
-
         Sale venta1 = new Sale();
-        //Empty sale
 
         try {
-            venta1.calculatePrice();
-            allSales.add(venta1);
+            System.out.println(venta1.calculatePrice());
         } catch (EmptySaleException e) {
             System.out.println(e.getMessage());
         }
 
-        Sale venta2= new Sale();
+        Sale venta2 = new Sale();
         venta2.getProducts().add(new Product("zumo de naranja", 5.00));
         venta2.getProducts().add(new Product("Croissant", 2.50));
 
         try {
-            venta2.calculatePrice();
-            allSales.add(venta2);
+            System.out.println(venta2.calculatePrice());
         } catch (EmptySaleException e) {
             System.out.println(e.getMessage());
         }
@@ -40,22 +34,15 @@ public class Main {
         venta3.getProducts().add(new Product("Coca-cola", 3.50));
 
         try {
-            venta3.calculatePrice();
-            allSales.add(venta3);
+            System.out.println(venta3.calculatePrice());
         } catch (EmptySaleException e) {
             System.out.println(e.getMessage());
         }
 
-        for (Sale s: allSales) {
-            totalSales += s.getPrice();
-        }
 
-        System.out.println("Las ventas han sido " + allSales.size());
-        System.out.println("El total es " + totalSales + " Euros");
 
-        // Trying the Out Of Bounds Exception.
         try {
-            allSales.get(5);
+            venta2.getProducts().get(6);
         } catch (IndexOutOfBoundsException e) {
             System.out.println("Error: " + e.getMessage());
         }

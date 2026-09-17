@@ -15,21 +15,18 @@ public class Sale {
         this.totalPrice = 0.0;
     }
 
-    public double calculatePrice(){
+    public String calculatePrice() {
 
-        if (this.products.isEmpty()) {
-            throw new EmptySaleException("Para hacer una venta el carrito no puede estar vacio");
+        if (!products.isEmpty()) {
+            for (Product p : products) {
+                totalPrice += p.getPrice();
+            }
+
+            return "El total de la venta es " + totalPrice;
+
+        } else {
+            throw new EmptySaleException();
         }
-
-        double sum = 0.0;
-
-        for (Product p: this.products) {
-            sum += p.getPrice();
-        }
-
-        totalPrice = sum;
-
-        return totalPrice;
 
     }
 
@@ -48,4 +45,6 @@ public class Sale {
     public void setPrice(double price) {
         this.totalPrice = price;
     }
+
 }
+
