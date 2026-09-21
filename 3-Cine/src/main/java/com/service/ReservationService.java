@@ -9,7 +9,6 @@ import com.util.ConsoleReader;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class ReservationService {
 
@@ -33,10 +32,10 @@ public class ReservationService {
                 }
             }
         } catch (InvalidPersonNameException e) {
-            System.out.println(e.getMessage());
+            System.out.println("Error" + e.getMessage());
         }
 
-        return value;
+        return !value;
     }
 
     // Tiene que enseñar en pantalla todos los asientos reservados, en listSeats.
@@ -59,8 +58,7 @@ public class ReservationService {
             while (true) {
                 String name = ConsoleReader.readString("Cual es el nombre de la persona?");
                 if (!ReservationService.checkName(name)) {
-                    System.out.println("La persona no existe.\n" +
-                            "Escribe un nombre valido.");
+                    System.out.println("Escribe un nombre valido.");
                 } else {
                     for (Seat seat : listSeats) {
                         if (seat.getPersonName().equals(name)) {
@@ -77,18 +75,17 @@ public class ReservationService {
     public static void reserveSeat(ReservationService service) {
 
         String name = ConsoleReader.readString("Cual es el nombre?");
-        int row = ReservationService.getRow(service);
+        int rowNumber = ReservationService.getRow(service);
         int seatNumber = ReservationService.getSeat(service);
 
-        // Meter algo que avise cuando la reserva ya existe.
         try {
             for (Seat seat : listSeats) {
-                if (seat.equals(new Seat(row, seatNumber, ""))) {
+                if (seat.equals(new Seat(rowNumber, seatNumber, ""))) {
                     throw new SeatAlreadyTakenException("La reserva ya existe");
                 }
             }
 
-            listSeats.add(new Seat(row, seatNumber, name));
+            listSeats.add(new Seat(rowNumber, seatNumber, name));
             System.out.println("La reserva ha sido hecha.");
 
         } catch (SeatAlreadyTakenException e) {
@@ -96,7 +93,6 @@ public class ReservationService {
         }
     }
 
-    //To cancel: pedir row and seat, buscarlo y cancelarlo.
     public static void cancelSeat(ReservationService service) {
 
         try {
@@ -127,8 +123,7 @@ public class ReservationService {
             while (true) {
                 String name = ConsoleReader.readString("Cual es el nombre de la persona?");
                 if (!ReservationService.checkName(name)) {
-                    System.out.println("La persona no existe.\n" +
-                            "Escribe un nombre valido.");
+                    System.out.println("Escribe un nombre valido.");
                 } else {
                     listSeats.removeIf(seat -> seat.getPersonName().equalsIgnoreCase(name));
                     System.out.println("Todas las reservas con ese nombre han sido canceladas");

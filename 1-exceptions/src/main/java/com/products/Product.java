@@ -10,6 +10,7 @@ public class Product {
         this.price = price;
     }
 
+    //quitarlo si no usan
     public String getName() {
         return name;
     }

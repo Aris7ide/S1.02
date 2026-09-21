@@ -86,7 +86,7 @@ public class ConsoleReader {
             try {
                 String input = scanner.nextLine().strip();
 
-                if (input.length()>20) {
+                if (input.length() > 20) {
                     throw new InvalidStringLength("Maximo 20 letras");
                 }
 
@@ -98,17 +98,17 @@ public class ConsoleReader {
         }
     }
 
-    public static String readBoolean(String message) {
+    public static boolean readBoolean(String message) {
         while (true) {
             System.out.println(message);
             try {
                 String input = scanner.nextLine();
 
-                if (!input.equals("s") && !input.equals("n")) {
+                if (!input.equalsIgnoreCase("s") && !input.equalsIgnoreCase("n")) {
                     throw new InvalidBoolean("Tiene que ser \"s\" o \"n\"");
                 }
 
-                return input;
+                return true;
             } catch (InvalidBoolean e) {
                 System.out.println(e.getMessage());
             }

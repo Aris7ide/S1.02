@@ -15,10 +15,9 @@ public class Main {
 
         char valueChar = ConsoleReader.readChar("Escribe una sola letra");
 
-        String valueString = ConsoleReader.readString("Escribe una frase de no mas de 20 palabras");
+        String valueString = ConsoleReader.readString("Escribe una frase de no mas de 20 letras");
 
-        String valueBoolean = ConsoleReader.readBoolean("s/n?");
-
+        boolean valueBoolean = ConsoleReader.readBoolean("s/n?"); //
     }
 }
 
